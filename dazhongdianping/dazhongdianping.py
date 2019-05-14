@@ -33,7 +33,6 @@ def get_css(content):
     :param content:大众点评页源码内容：https://www.dianping.com/beijing/ch10/r70191
     :return:css_url:svg内容的url，多个span对应的class值
                     例：['qsu0f', 'qsxjd', 'qst99', ..., 'qsxjd']
-
     """
     matched = re.search(r'href="([^"]+svgtextcss[^"]+)"', content, re.M)
     # print("=====matched: ", matched)
@@ -275,9 +274,7 @@ def get_data(url):
                   "environment_score: {},"
                   "\n ".
                   format(name, comment_num, price_num, taste, service, environment))
-            # print("=======taste: ", taste)
-            # print("=======service: ", service)
-            # print("=======environment: ", environment)
+            print("taste: ", taste)
 
 
 if __name__ == '__main__':
